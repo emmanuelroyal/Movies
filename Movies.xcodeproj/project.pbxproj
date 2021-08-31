@@ -25,6 +25,7 @@
 		18619E5726DE5BAF00D2D4A0 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 18619E5626DE5BAF00D2D4A0 /* Realm */; };
 		18619E5A26DE5BE900D2D4A0 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 18619E5926DE5BE900D2D4A0 /* SDWebImage */; };
 		18619E5C26DE5FE100D2D4A0 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619E5B26DE5FE100D2D4A0 /* RealmService.swift */; };
+		18619E5F26DE629600D2D4A0 /* AlamofireRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619E5E26DE629600D2D4A0 /* AlamofireRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		18619E4B26DE54E700D2D4A0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		18619E4E26DE550700D2D4A0 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		18619E5B26DE5FE100D2D4A0 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		18619E5E26DE629600D2D4A0 /* AlamofireRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				1825EA1626DCE0D5006931B0 /* AppDelegate.swift */,
 				1825EA1826DCE0D5006931B0 /* SceneDelegate.swift */,
 				18619E5B26DE5FE100D2D4A0 /* RealmService.swift */,
+				18619E5D26DE627600D2D4A0 /* Network */,
 				1825EA1A26DCE0D5006931B0 /* ViewController.swift */,
 				1825EA2C26DD0700006931B0 /* MoviesCollectionViewCell.swift */,
 				18619E4726DD58A200D2D4A0 /* MoviesModel.swift */,
@@ -134,6 +137,14 @@
 			children = (
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		18619E5D26DE627600D2D4A0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				18619E5E26DE629600D2D4A0 /* AlamofireRequest.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +260,7 @@
 			files = (
 				1825EA1B26DCE0D5006931B0 /* ViewController.swift in Sources */,
 				1825EA1726DCE0D5006931B0 /* AppDelegate.swift in Sources */,
+				18619E5F26DE629600D2D4A0 /* AlamofireRequest.swift in Sources */,
 				18619E4826DD58A200D2D4A0 /* MoviesModel.swift in Sources */,
 				1825EA1926DCE0D5006931B0 /* SceneDelegate.swift in Sources */,
 				18619E4F26DE550700D2D4A0 /* DetailViewModel.swift in Sources */,

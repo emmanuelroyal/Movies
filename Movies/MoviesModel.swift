@@ -6,73 +6,60 @@
 //
 
 import UIKit
+import RealmSwift
 
-struct MoviesModel {
+struct MoviesModel: Decodable {
     let page: Int
     let results: [Result]
 }
 
 // MARK: - Result
-struct Result {
-    let adult: Bool
+struct Result: Decodable {
     let backdropPath: String
-    let genreIDS: [Int]
     let id: Int
     let originalLanguage, originalTitle, overview: String
     let popularity: Double
-    let posterPath, releaseDate, title: String
-    let video: Bool
     let voteAverage, voteCount: Int
 }
 
-struct Movie {
-    let adult: Bool
+struct Movie: Decodable {
     let backdropPath: String
-    let belongsToCollection: BelongsToCollection
-    let budget: Int
     let genres: [Genre]
-    let homepage: String
-    let id: Int
     let imdbID, originalLanguage, originalTitle, overview: String
-    let popularity: Double
-    let posterPath: String
-    let productionCompanies: [ProductionCompany]
     let productionCountries: [ProductionCountry]
     let releaseDate: String
     let revenue, runtime: Int
     let spokenLanguages: [SpokenLanguage]
     let status, tagline, title: String
-    let video: Bool
     let voteAverage, voteCount: Int
 }
 
-// MARK: - BelongsToCollection
-struct BelongsToCollection {
-    let id: Int
-    let name, posterPath, backdropPath: String
-}
-
 // MARK: - Genre
-struct Genre {
+struct Genre: Decodable {
     let id: Int
     let name: String
 }
 
-// MARK: - ProductionCompany
-struct ProductionCompany {
-    let id: Int
-    let logoPath: String?
-    let name, originCountry: String
-}
-
 // MARK: - ProductionCountry
-struct ProductionCountry {
+struct ProductionCountry: Decodable {
     let iso3166_1, name: String
 }
 
 // MARK: - SpokenLanguage
-struct SpokenLanguage {
+struct SpokenLanguage: Decodable {
     let englishName, iso639_1, name: String
 }
 
+class SavedMovieModel: Object {
+    
+    @objc dynamic var name = ""
+    @objc dynamic var image: UIImage!
+    @objc dynamic var runTime = ""
+    @objc dynamic var genre = ""
+    @objc dynamic var releaseDate = ""
+    @objc dynamic var country = ""
+    @objc dynamic var tagLine = ""
+    @objc dynamic var liked: Bool = false
+    
+}
 
