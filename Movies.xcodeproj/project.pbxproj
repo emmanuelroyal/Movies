@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,12 @@
 		18619E4026DD577700D2D4A0 /* MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619E3F26DD577700D2D4A0 /* MoviesTests.swift */; };
 		18619E4826DD58A200D2D4A0 /* MoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619E4726DD58A200D2D4A0 /* MoviesModel.swift */; };
 		18619E4A26DD673700D2D4A0 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619E4926DD673700D2D4A0 /* MoviesViewModel.swift */; };
+		18619E4C26DE54E700D2D4A0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619E4B26DE54E700D2D4A0 /* DetailViewController.swift */; };
+		18619E4F26DE550700D2D4A0 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619E4E26DE550700D2D4A0 /* DetailViewModel.swift */; };
+		18619E5226DE5B0500D2D4A0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 18619E5126DE5B0500D2D4A0 /* Alamofire */; };
+		18619E5526DE5BAF00D2D4A0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 18619E5426DE5BAF00D2D4A0 /* RealmSwift */; };
+		18619E5726DE5BAF00D2D4A0 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 18619E5626DE5BAF00D2D4A0 /* Realm */; };
+		18619E5A26DE5BE900D2D4A0 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 18619E5926DE5BE900D2D4A0 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,8 @@
 		18619E4126DD577700D2D4A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18619E4726DD58A200D2D4A0 /* MoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModel.swift; sourceTree = "<group>"; };
 		18619E4926DD673700D2D4A0 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		18619E4B26DE54E700D2D4A0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		18619E4E26DE550700D2D4A0 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18619E5726DE5BAF00D2D4A0 /* Realm in Frameworks */,
+				18619E5526DE5BAF00D2D4A0 /* RealmSwift in Frameworks */,
+				18619E5A26DE5BE900D2D4A0 /* SDWebImage in Frameworks */,
+				18619E5226DE5B0500D2D4A0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +106,9 @@
 				18619E4726DD58A200D2D4A0 /* MoviesModel.swift */,
 				18619E4926DD673700D2D4A0 /* MoviesViewModel.swift */,
 				1825EA1C26DCE0D5006931B0 /* Main.storyboard */,
+				18619E4B26DE54E700D2D4A0 /* DetailViewController.swift */,
+				18619E4E26DE550700D2D4A0 /* DetailViewModel.swift */,
+				18619E4D26DE54EB00D2D4A0 /* Detail */,
 				1825EA2A26DD0454006931B0 /* Helpers.swift */,
 				1825EA1F26DCE0D8006931B0 /* Assets.xcassets */,
 				1825EA2126DCE0D8006931B0 /* LaunchScreen.storyboard */,
@@ -109,6 +124,13 @@
 				18619E4126DD577700D2D4A0 /* Info.plist */,
 			);
 			path = MoviesTests;
+			sourceTree = "<group>";
+		};
+		18619E4D26DE54EB00D2D4A0 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +149,12 @@
 			dependencies = (
 			);
 			name = Movies;
+			packageProductDependencies = (
+				18619E5126DE5B0500D2D4A0 /* Alamofire */,
+				18619E5426DE5BAF00D2D4A0 /* RealmSwift */,
+				18619E5626DE5BAF00D2D4A0 /* Realm */,
+				18619E5926DE5BE900D2D4A0 /* SDWebImage */,
+			);
 			productName = Movies;
 			productReference = 1825EA1326DCE0D5006931B0 /* Movies.app */;
 			productType = "com.apple.product-type.application";
@@ -176,6 +204,11 @@
 				Base,
 			);
 			mainGroup = 1825EA0A26DCE0D5006931B0;
+			packageReferences = (
+				18619E5026DE5B0500D2D4A0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				18619E5326DE5BAF00D2D4A0 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				18619E5826DE5BE900D2D4A0 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 1825EA1426DCE0D5006931B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -215,9 +248,11 @@
 				1825EA1726DCE0D5006931B0 /* AppDelegate.swift in Sources */,
 				18619E4826DD58A200D2D4A0 /* MoviesModel.swift in Sources */,
 				1825EA1926DCE0D5006931B0 /* SceneDelegate.swift in Sources */,
+				18619E4F26DE550700D2D4A0 /* DetailViewModel.swift in Sources */,
 				18619E4A26DD673700D2D4A0 /* MoviesViewModel.swift in Sources */,
 				1825EA2B26DD0454006931B0 /* Helpers.swift in Sources */,
 				1825EA2D26DD0700006931B0 /* MoviesCollectionViewCell.swift in Sources */,
+				18619E4C26DE54E700D2D4A0 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +519,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18619E5026DE5B0500D2D4A0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+		18619E5326DE5BAF00D2D4A0 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.13.0;
+			};
+		};
+		18619E5826DE5BE900D2D4A0 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18619E5126DE5B0500D2D4A0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18619E5026DE5B0500D2D4A0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		18619E5426DE5BAF00D2D4A0 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18619E5326DE5BAF00D2D4A0 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		18619E5626DE5BAF00D2D4A0 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18619E5326DE5BAF00D2D4A0 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		18619E5926DE5BE900D2D4A0 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18619E5826DE5BE900D2D4A0 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1825EA0B26DCE0D5006931B0 /* Project object */;
 }

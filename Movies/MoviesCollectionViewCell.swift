@@ -21,7 +21,7 @@ class MoviesCollectionViewCell: UICollectionViewCell {
     
     func setup(with data: MoviesModel){
         
-        moviesImage.image = data.image
+        moviesImage.image = data.
         nameLabel.text = data.nameLabel
         dateReleasedLabel.text = data.dateReleasedLabel
         
