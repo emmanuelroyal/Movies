@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import RealmSwift
 
-class DetailViewModel {
-    
-    var movieDetails: [EditedMovieModel] = []
+class SavedDetailViewModel{
     var movies:[Movie] = []
     private var service = NetworkService()
+    var data: [SavedMovieModel] {realm.objects(SavedMovieModel.self).map({ $0 })}
+    let realm = try! Realm()
     
     func fetchMovie(movieId: Int, completion: @escaping () -> Void) {
         
@@ -37,18 +38,21 @@ class DetailViewModel {
         
     }
     
-    func create(item: SavedMovieModel){
+    func delete(item: SavedMovieModel){
+        let data = realm.objects(SavedMovieModel.self).map({ $0 })
         
-        let savedMovie = SavedMovieModel()
-        savedMovie.name = item.name
-        savedMovie.genre = item.genre
-        savedMovie.image = item.image
-        savedMovie.country = item.country
-        savedMovie.runTime = item.runTime
-        savedMovie.liked = item.liked
-        RealmService.shared.create(savedMovie)
-    
+        for i in data {
+            
+            if i.image == item.image {
+                
+                RealmService.shared.delete(i)
+                
+            }
+            
+        }
+        
     }
-
+    
     
 }
+

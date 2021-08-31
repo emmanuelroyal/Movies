@@ -19,13 +19,14 @@
 		18619E4826DD58A200D2D4A0 /* MoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619E4726DD58A200D2D4A0 /* MoviesModel.swift */; };
 		18619E4A26DD673700D2D4A0 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619E4926DD673700D2D4A0 /* MoviesViewModel.swift */; };
 		18619E4C26DE54E700D2D4A0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619E4B26DE54E700D2D4A0 /* DetailViewController.swift */; };
-		18619E4F26DE550700D2D4A0 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619E4E26DE550700D2D4A0 /* DetailViewModel.swift */; };
+		18619E4F26DE550700D2D4A0 /* SavedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619E4E26DE550700D2D4A0 /* SavedDetailViewModel.swift */; };
 		18619E5226DE5B0500D2D4A0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 18619E5126DE5B0500D2D4A0 /* Alamofire */; };
 		18619E5526DE5BAF00D2D4A0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 18619E5426DE5BAF00D2D4A0 /* RealmSwift */; };
 		18619E5726DE5BAF00D2D4A0 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 18619E5626DE5BAF00D2D4A0 /* Realm */; };
 		18619E5A26DE5BE900D2D4A0 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 18619E5926DE5BE900D2D4A0 /* SDWebImage */; };
 		18619E5C26DE5FE100D2D4A0 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619E5B26DE5FE100D2D4A0 /* RealmService.swift */; };
 		18619E5F26DE629600D2D4A0 /* AlamofireRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619E5E26DE629600D2D4A0 /* AlamofireRequest.swift */; };
+		18619E6126DE885300D2D4A0 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18619E6026DE885300D2D4A0 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +56,10 @@
 		18619E4726DD58A200D2D4A0 /* MoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModel.swift; sourceTree = "<group>"; };
 		18619E4926DD673700D2D4A0 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		18619E4B26DE54E700D2D4A0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		18619E4E26DE550700D2D4A0 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		18619E4E26DE550700D2D4A0 /* SavedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDetailViewModel.swift; sourceTree = "<group>"; };
 		18619E5B26DE5FE100D2D4A0 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		18619E5E26DE629600D2D4A0 /* AlamofireRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRequest.swift; sourceTree = "<group>"; };
+		18619E6026DE885300D2D4A0 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +115,8 @@
 				18619E4926DD673700D2D4A0 /* MoviesViewModel.swift */,
 				1825EA1C26DCE0D5006931B0 /* Main.storyboard */,
 				18619E4B26DE54E700D2D4A0 /* DetailViewController.swift */,
-				18619E4E26DE550700D2D4A0 /* DetailViewModel.swift */,
+				18619E4E26DE550700D2D4A0 /* SavedDetailViewModel.swift */,
+				18619E6026DE885300D2D4A0 /* DetailViewModel.swift */,
 				18619E4D26DE54EB00D2D4A0 /* Detail */,
 				1825EA2A26DD0454006931B0 /* Helpers.swift */,
 				1825EA1F26DCE0D8006931B0 /* Assets.xcassets */,
@@ -263,8 +266,9 @@
 				18619E5F26DE629600D2D4A0 /* AlamofireRequest.swift in Sources */,
 				18619E4826DD58A200D2D4A0 /* MoviesModel.swift in Sources */,
 				1825EA1926DCE0D5006931B0 /* SceneDelegate.swift in Sources */,
-				18619E4F26DE550700D2D4A0 /* DetailViewModel.swift in Sources */,
+				18619E4F26DE550700D2D4A0 /* SavedDetailViewModel.swift in Sources */,
 				18619E4A26DD673700D2D4A0 /* MoviesViewModel.swift in Sources */,
+				18619E6126DE885300D2D4A0 /* DetailViewModel.swift in Sources */,
 				1825EA2B26DD0454006931B0 /* Helpers.swift in Sources */,
 				1825EA2D26DD0700006931B0 /* MoviesCollectionViewCell.swift in Sources */,
 				18619E4C26DE54E700D2D4A0 /* DetailViewController.swift in Sources */,

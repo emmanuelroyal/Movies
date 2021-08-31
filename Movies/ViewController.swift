@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var collection: UICollectionView!
     var viewModel = MoviesViewModel()
     
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMediaListeners()
-
+        
     }
     
     
@@ -42,8 +42,8 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UICollectionViewDelegate,
-                                    UICollectionViewDataSource,
-                                    UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
+                          UICollectionViewDataSource,
+                          UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
@@ -76,7 +76,21 @@ extension ViewController: UICollectionViewDelegate,
                       height: collectionView.frame.height/2.45)
         
     }
-    
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath) as? MoviesCollectionViewCell
+        cell?.contentView.backgroundColor = .systemGray
+        collection.deselectItem(at: indexPath, animated: true)
+        let movieData = viewModel.popularMovies[indexPath.row]
+        let details = EditedMovieModel(name: movieData.name, runTime: "", genre: "", releaseDate: movieData.releaseDate, country: "", tagLine: "", image: "", rating: "", liked: movieData.liked, movieId: movieData.movieId)
+        
+        guard let newViewController = storyboard?.instantiateViewController(identifier: "DetailStoryBoard") as?  DetailViewController   else { return }
+        
+        newViewController.viewModel.movieDetails.removeAll()
+        newViewController.viewModel.movieDetails.append(details)
+        navigationController?.pushViewController(newViewController, animated: true)
+        
+    }
 }
+
 
