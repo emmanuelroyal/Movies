@@ -7,12 +7,18 @@
 
 import UIKit
 import Alamofire
+import RealmSwift
 
 class MoviesViewModel {
     
-    var popularMovies:[MoviesModel] = []
+    var popularMovies: [EditedMovieModel] = []
     private var service = NetworkService()
-    var movies:[Movie] = []
+    var ApiData: [MoviesModel] = []
+    var itemNames:[String] = []
+    var completion: (() -> Void)?
+    var data: [SavedMovieModel] {realm.objects(SavedMovieModel.self).map({ $0 })}
+    
+    let realm = try! Realm()
     
     func fetchPopularmovies(completion: @escaping () -> Void) {
         
@@ -23,7 +29,7 @@ class MoviesViewModel {
             do {
                 
                 let popularMovies =  try JSONDecoder().decode(MoviesModel.self, from: response)
-                self.popularMovies.append(popularMovies)
+                self.ApiData.append(popularMovies)
                 completion()
                 
             } catch {
@@ -36,28 +42,31 @@ class MoviesViewModel {
         
     }
     
-    func fetchMovie(movieId: Int, completion: @escaping () -> Void) {
+    func get() {
         
-        self.movies.removeAll()
-        
-        service.fetchMovies(endPoint: "\(movieId)?api_key=d45944547cfa0d9a8c565045b166e51b&language=en-US") { response in
+        self.popularMovies.removeAll()
+        let realmData = data
+        let base = "https://image.tmdb.org/t/p/original/"
+        for movie in self.ApiData {
             
-            guard let response = response.data else { return }
-            
-            do {
+            for movies in realmData {
                 
-                let movie =  try JSONDecoder().decode(Movie.self, from: response)
-                self.movies.append(movie)
-                completion()
+                self.itemNames.append(movies.name)
                 
-            } catch {
+            }
+            if self.itemNames.contains(movie.results[0].originalTitle) {
                 
-                print(error.localizedDescription)
+                let image = base + movie.results[0].backdropPath
+                self.popularMovies.append(EditedMovieModel(name: movie.results[0].title, runTime: " ", genre: " ", releaseDate: movie.results[0].releaseDate, country: " " , tagLine: " ", image: image, liked: true, movieId: movie.results[0].id))
                 
+            } else {
+                let image = base + movie.results[0].backdropPath
+                self.popularMovies.append(EditedMovieModel(name: movie.results[0].title, runTime: " ", genre: " ", releaseDate: movie.results[0].releaseDate, country: " " , tagLine: " ", image: image, liked: false, movieId: movie.results[0].id))
             }
             
         }
         
+        completion?()
     }
     
 }

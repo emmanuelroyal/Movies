@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MoviesCollectionViewCell: UICollectionViewCell {
     
@@ -19,11 +20,11 @@ class MoviesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var fifthStar: UIImageView!
     
     
-    func setup(with data: MoviesModel){
-        
-        moviesImage.image = data.
-        nameLabel.text = data.nameLabel
-        dateReleasedLabel.text = data.dateReleasedLabel
+    func setup(with data: EditedMovieModel){
+        moviesImage.image = UIImage(systemName: "photo")
+        moviesImage.sd_setImage(with: data.image.asUrl)
+        nameLabel.text = data.name
+        dateReleasedLabel.text = data.releaseDate
         
         let fullStar = UIImage(systemName: "star.fill")
         

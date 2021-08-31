@@ -18,8 +18,8 @@ struct Result: Decodable {
     let backdropPath: String
     let id: Int
     let originalLanguage, originalTitle, overview: String
-    let popularity: Double
-    let voteAverage, voteCount: Int
+    let voteCount: Int
+    let releaseDate, title: String
 }
 
 struct Movie: Decodable {
@@ -59,7 +59,33 @@ class SavedMovieModel: Object {
     @objc dynamic var releaseDate = ""
     @objc dynamic var country = ""
     @objc dynamic var tagLine = ""
+    @objc dynamic var rating = ""
     @objc dynamic var liked: Bool = false
     
 }
 
+class EditedMovieModel {
+    
+    var name, runTime, genre, releaseDate, country, tagLine, image, rating : String!
+     var liked: Bool
+     var movieId: Int
+    
+    internal init(name: String? = nil,
+                  runTime: String? = nil, genre: String? = nil,
+                  releaseDate: String? = nil, country: String? = nil,
+                  tagLine: String? = nil, image: String? = nil, rating: String? = nil,
+                  liked: Bool, movieId: Int) {
+        
+        self.name = name
+        self.runTime = runTime
+        self.genre = genre
+        self.releaseDate = releaseDate
+        self.country = country
+        self.tagLine = tagLine
+        self.image = image
+        self.rating = rating
+        self.liked = liked
+        self.movieId = movieId
+    }
+    
+}

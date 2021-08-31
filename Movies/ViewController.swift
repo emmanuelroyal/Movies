@@ -12,12 +12,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var collection: UICollectionView!
     var viewModel = MoviesViewModel()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-    }
+        setupMediaListeners()
 
+    }
+    
+    
+    fileprivate func setupMediaListeners() {
+        
+        viewModel.fetchPopularmovies {
+            
+            self.viewModel.get()
+            
+        }
+        
+        viewModel.completion = { [weak self] in
+            
+            DispatchQueue.main.async {
+                self?.collection.reloadData()
+            }
+            
+        }
+        
+    }
+    
 }
+
 extension ViewController: UICollectionViewDelegate,
                                     UICollectionViewDataSource,
                                     UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
@@ -25,7 +48,7 @@ extension ViewController: UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         
-        viewModel.movies.count
+        viewModel.popularMovies.count
         
     }
     
@@ -40,7 +63,7 @@ extension ViewController: UICollectionViewDelegate,
             
         }
         
-        cell.setup(with: viewModel.movies[indexPath.row])
+        cell.setup(with: viewModel.popularMovies[indexPath.row])
         return cell
         
     }
