@@ -19,6 +19,7 @@ class SavedDataCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var fifthStar: UIImageView!
     
     func setup(with data: SavedMovieModel){
+        
         movieImage.image = UIImage(data: data.image as Data)
         movieTitle.text = data.name
         releaseDate.text = data.releaseDate
@@ -34,6 +35,7 @@ class SavedDataCollectionViewCell: UICollectionViewCell {
         case 1:
             
             DispatchQueue.main.async { [self] in
+                
                 self.firstStar.image = halfStar
                 firstStar.tintColor = #colorLiteral(red: 0.9699534774, green: 0.9455825686, blue: 0.6218637824, alpha: 1)
             }
@@ -42,6 +44,7 @@ class SavedDataCollectionViewCell: UICollectionViewCell {
         case 2:
             
             DispatchQueue.main.async { [self] in
+                
                 firstStar.image = fullStar
                 firstStar.tintColor = #colorLiteral(red: 1, green: 0.9782602489, blue: 0.6465145808, alpha: 1)
             }
@@ -49,6 +52,7 @@ class SavedDataCollectionViewCell: UICollectionViewCell {
         case 3:
             
             DispatchQueue.main.async { [self] in
+                
                 firstStar.image = fullStar
                 secondStar.image = halfStar
                 firstStar.tintColor = #colorLiteral(red: 0.9699534774, green: 0.9455825686, blue: 0.6218637824, alpha: 1)
@@ -58,6 +62,7 @@ class SavedDataCollectionViewCell: UICollectionViewCell {
         case 4:
             
             DispatchQueue.main.async { [self] in
+                
                 firstStar.image = fullStar
                 secondStar.image = fullStar
                 firstStar.tintColor = #colorLiteral(red: 0.9699534774, green: 0.9455825686, blue: 0.6218637824, alpha: 1)
@@ -68,6 +73,7 @@ class SavedDataCollectionViewCell: UICollectionViewCell {
         case 5:
             
             DispatchQueue.main.async { [self] in
+                
                 firstStar.image = fullStar
                 secondStar.image = fullStar
                 thirdStar.image = halfStar

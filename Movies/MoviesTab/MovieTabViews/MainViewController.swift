@@ -20,6 +20,11 @@ class ViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        viewModel.get()
+        setupMediaListeners()
+    }
+    
     
     fileprivate func setupMediaListeners() {
         

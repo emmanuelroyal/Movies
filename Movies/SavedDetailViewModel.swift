@@ -15,6 +15,7 @@ class SavedDetailViewModel{
 
     
     func delete(item: SavedMovieModel){
+        
         let data = realm.objects(SavedMovieModel.self).map({ $0 })
         
         for i in data {

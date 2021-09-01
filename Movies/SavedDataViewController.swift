@@ -21,6 +21,7 @@ class SavedDataViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         count += 1
         if count >= 3 {
             

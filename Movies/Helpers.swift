@@ -188,13 +188,31 @@ private var kAssociationKeyMaxLength: Int = 0
    }
 
 extension UITextField{
+    
     @IBInspectable var placeHolderColor: UIColor? {
+        
         get {
+            
             return self.placeHolderColor
+            
         }
+        
         set {
+            
             self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedString.Key.foregroundColor: newValue!])
+            
         }
+        
+    }
+    
+}
+extension UIViewController {
+    
+    func showAlert (alertText: String, alertMessage: String) {
+        
+        let alert = UIAlertController(title: alertText, message: alertMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Got it", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
     }
 }
-
