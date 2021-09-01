@@ -61,7 +61,13 @@ class DetailViewController: UIViewController {
             viewModel.movieDetails[0].liked = true
             showAlert(alertText: "Done", alertMessage: "\(viewModel.movieDetails[0].name!) has been saved ")
             
-        } else { return }
+        } else {
+            
+            showAlert(alertText: "Sorry", alertMessage: "File has already been saved")
+            
+            return
+            
+        }
         
     }
     

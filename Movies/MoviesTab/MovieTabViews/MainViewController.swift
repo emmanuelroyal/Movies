@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     var isLoading = false
     var page = 1
     var count = 1
-    var swipeDown = false
     var data:Int { viewModel.apiData.count * 20 }
     var gesture = UISwipeGestureRecognizer()
     
@@ -27,7 +26,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         collection.reloadData()
-        print (swipeDown)
         if count > 1 {
             viewModel.get(page: page - 1)
             setupMediaListeners()
@@ -115,7 +113,6 @@ extension ViewController: UICollectionViewDelegate,
         
         
         if indexPath.row == viewModel.popularMovies.count / 2 && collection.scrollDirection == .up && viewModel.isLoading == true {
-            print(collection.scrollDirection)
             page += 1
             viewModel.fetchPopularmovies(page: page) { [self] in
                 self.viewModel.get(page: page - 1)

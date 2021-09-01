@@ -115,23 +115,79 @@
 		1825EA1526DCE0D5006931B0 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				185002C126E00D5700BAA8A0 /* App+Delegates */,
+				185002BD26E00CA100BAA8A0 /* SavedMovie */,
 				18619E7026DEF9F400D2D4A0 /* MoviesTab */,
-				1825EA1626DCE0D5006931B0 /* AppDelegate.swift */,
-				1825EA1826DCE0D5006931B0 /* SceneDelegate.swift */,
+				185002C326E00D8E00BAA8A0 /* StoryBoards */,
 				18619E6F26DEF9C600D2D4A0 /* PersistenceService */,
 				18619E5D26DE627600D2D4A0 /* Network */,
-				18619E6426DE9DF900D2D4A0 /* SavedDataViewController.swift */,
-				18619E6626DEA00000D2D4A0 /* SavedDataViewModel.swift */,
-				18619E6826DEA0F300D2D4A0 /* SavedDataCollectionViewCell.swift */,
-				1825EA1C26DCE0D5006931B0 /* Main.storyboard */,
-				18619E4E26DE550700D2D4A0 /* SavedDetailViewModel.swift */,
-				18619E6226DE9B9300D2D4A0 /* SavedDetailsViewController.swift */,
-				1825EA2A26DD0454006931B0 /* Helpers.swift */,
+				185002C226E00D7600BAA8A0 /* Helpers */,
 				1825EA1F26DCE0D8006931B0 /* Assets.xcassets */,
-				1825EA2126DCE0D8006931B0 /* LaunchScreen.storyboard */,
 				1825EA2426DCE0D8006931B0 /* Info.plist */,
 			);
 			path = Movies;
+			sourceTree = "<group>";
+		};
+		185002BD26E00CA100BAA8A0 /* SavedMovie */ = {
+			isa = PBXGroup;
+			children = (
+				185002C026E00CD700BAA8A0 /* SavedTabViews */,
+				185002BF26E00CC300BAA8A0 /* SavedTabViewModels */,
+				185002BE26E00CAC00BAA8A0 /* SavedModel */,
+			);
+			path = SavedMovie;
+			sourceTree = "<group>";
+		};
+		185002BE26E00CAC00BAA8A0 /* SavedModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SavedModel;
+			sourceTree = "<group>";
+		};
+		185002BF26E00CC300BAA8A0 /* SavedTabViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				18619E6626DEA00000D2D4A0 /* SavedDataViewModel.swift */,
+				18619E4E26DE550700D2D4A0 /* SavedDetailViewModel.swift */,
+			);
+			path = SavedTabViewModels;
+			sourceTree = "<group>";
+		};
+		185002C026E00CD700BAA8A0 /* SavedTabViews */ = {
+			isa = PBXGroup;
+			children = (
+				18619E6826DEA0F300D2D4A0 /* SavedDataCollectionViewCell.swift */,
+				18619E6226DE9B9300D2D4A0 /* SavedDetailsViewController.swift */,
+				18619E6426DE9DF900D2D4A0 /* SavedDataViewController.swift */,
+			);
+			path = SavedTabViews;
+			sourceTree = "<group>";
+		};
+		185002C126E00D5700BAA8A0 /* App+Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				1825EA1626DCE0D5006931B0 /* AppDelegate.swift */,
+				1825EA1826DCE0D5006931B0 /* SceneDelegate.swift */,
+			);
+			path = "App+Delegates";
+			sourceTree = "<group>";
+		};
+		185002C226E00D7600BAA8A0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1825EA2A26DD0454006931B0 /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		185002C326E00D8E00BAA8A0 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				1825EA1C26DCE0D5006931B0 /* Main.storyboard */,
+				1825EA2126DCE0D8006931B0 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 		18619E3E26DD577700D2D4A0 /* MoviesTests */ = {

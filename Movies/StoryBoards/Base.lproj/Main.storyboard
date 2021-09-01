@@ -954,11 +954,11 @@
             </objects>
             <point key="canvasLocation" x="3227.536231884058" y="-527.00892857142856"/>
         </scene>
-        <!--Liked-->
+        <!--Saved-->
         <scene sceneID="fnw-Rq-8Rf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="G7f-mw-V4D" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Liked" id="t2r-LQ-1cY">
+                    <tabBarItem key="tabBarItem" title="Saved" id="t2r-LQ-1cY">
                         <imageReference key="image" image="heart.fill" catalog="system" renderingMode="template"/>
                     </tabBarItem>
                     <toolbarItems/>
