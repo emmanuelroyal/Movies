@@ -11,26 +11,36 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collection: UICollectionView!
     var viewModel = MoviesViewModel()
-    
-    
+    var isLoading = false
+    var page = 1
+    var count = 1
+    var swipeDown = false
+    var data:Int { viewModel.apiData.count * 20 }
+    var gesture = UISwipeGestureRecognizer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupMediaListeners()
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        viewModel.get()
-        setupMediaListeners()
+        collection.reloadData()
+        print (swipeDown)
+        if count > 1 {
+            viewModel.get(page: page - 1)
+            setupMediaListeners()
+            count += 1
+        }
+        
     }
-    
     
     fileprivate func setupMediaListeners() {
         
-        viewModel.fetchPopularmovies {
+        viewModel.fetchPopularmovies(page: page) {
             
-            self.viewModel.get()
+            self.viewModel.get(page: self.page - 1)
             
         }
         
@@ -53,7 +63,8 @@ extension ViewController: UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         
-        viewModel.popularMovies.count
+        return viewModel.popularMovies.count
+        
         
     }
     
@@ -96,6 +107,28 @@ extension ViewController: UICollectionViewDelegate,
         navigationController?.pushViewController(newViewController, animated: true)
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        
+        
+        
+        if indexPath.row == viewModel.popularMovies.count / 2 && collection.scrollDirection == .up && viewModel.isLoading == true {
+            print(collection.scrollDirection)
+            page += 1
+            viewModel.fetchPopularmovies(page: page) { [self] in
+                self.viewModel.get(page: page - 1)
+                viewModel.completion  = { [weak self] in
+                    DispatchQueue.main.async {
+                        self?.collection.reloadData()
+                    }
+                    
+                }
+            }
+        }
+    }
+    
 }
 
 

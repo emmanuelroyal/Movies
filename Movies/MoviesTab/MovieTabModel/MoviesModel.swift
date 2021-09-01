@@ -135,7 +135,7 @@ class SavedMovieModel: Object {
     
 }
 
-class EditedMovieModel {
+class EditedMovieModel: Equatable {
     
     var name, runTime, genre, releaseDate, country, tagLine, image : String!
     var liked: Bool
@@ -158,6 +158,19 @@ class EditedMovieModel {
         self.rating = rating
         self.liked = liked
         self.movieId = movieId
+    }
+    
+    static func == (lhs: EditedMovieModel, rhs: EditedMovieModel) -> Bool {
+        return lhs.name == rhs.name &&
+            lhs.runTime == rhs.runTime &&
+            lhs.genre == rhs.genre &&
+            lhs.releaseDate == rhs.releaseDate &&
+            lhs.country == rhs.country &&
+            lhs.tagLine == rhs.tagLine &&
+            lhs.image == rhs.image &&
+            lhs.liked == rhs.liked &&
+            lhs.movieId == rhs.movieId &&
+            lhs.rating == rhs.rating
     }
     
 }

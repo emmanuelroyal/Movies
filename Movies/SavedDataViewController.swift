@@ -8,15 +8,15 @@
 import UIKit
 
 class SavedDataViewController: UIViewController {
-
+    
     @IBOutlet weak var collection: UICollectionView!
     
     var viewModel = SavedDataViewModel()
     var count = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-         count += 1
-    
+        count += 1
+        
         
     }
     
@@ -25,17 +25,17 @@ class SavedDataViewController: UIViewController {
         count += 1
         if count >= 3 {
             
-        collection.reloadData()
-        
+            collection.reloadData()
+            
         }
     }
     
 }
-   
+
 
 extension SavedDataViewController: UICollectionViewDelegate,
-                          UICollectionViewDataSource,
-                          UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
+                                   UICollectionViewDataSource,
+                                   UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
@@ -68,6 +68,7 @@ extension SavedDataViewController: UICollectionViewDelegate,
                       height: collectionView.frame.height/2.45)
         
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let cell = collectionView.cellForItem(at: indexPath) as? MoviesCollectionViewCell
@@ -78,7 +79,6 @@ extension SavedDataViewController: UICollectionViewDelegate,
         guard let newViewController = storyboard?.instantiateViewController(identifier: "SavedDetailStoryBoard") as?  SavedDetailsViewController   else { return }
         
         newViewController.viewModel.MovieDetails.append(movieData)
-        print(movieData)
         navigationController?.pushViewController(newViewController, animated: true)
         
     }

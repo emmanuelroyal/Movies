@@ -128,64 +128,64 @@ extension String {
 
 private var kAssociationKeyMaxLength: Int = 0
 
-   extension UITextField {
-
-       @IBInspectable var maxLength: Int {
-        
-           get {
-            
-               if let length = objc_getAssociatedObject(self, &kAssociationKeyMaxLength) as? Int {
-                
-                   return length
-               } else {
-                
-                   return Int.max
-                
-               }
-            
-           }
-           set {
-            
-               objc_setAssociatedObject(self, &kAssociationKeyMaxLength, newValue, .OBJC_ASSOCIATION_RETAIN)
-               self.addTarget(self, action: #selector(checkMaxLength), for: .editingChanged)
-            
-           }
-        
-       }
+extension UITextField {
     
-       func isInputMethod() -> Bool {
+    @IBInspectable var maxLength: Int {
         
-           if let positionRange = self.markedTextRange {
+        get {
             
-               if let _ = self.position(from: positionRange.start, offset: 0) {
+            if let length = objc_getAssociatedObject(self, &kAssociationKeyMaxLength) as? Int {
                 
-                   return true
+                return length
+            } else {
                 
-               }
+                return Int.max
+                
+            }
             
-           }
+        }
+        set {
+            
+            objc_setAssociatedObject(self, &kAssociationKeyMaxLength, newValue, .OBJC_ASSOCIATION_RETAIN)
+            self.addTarget(self, action: #selector(checkMaxLength), for: .editingChanged)
+            
+        }
         
-           return false
-        
-       }
-
-
-      @objc func checkMaxLength(textField: UITextField) {
-
-           guard !self.isInputMethod(), let prospectiveText = self.text,
-               prospectiveText.count > maxLength
-               else {
-            
-                   return
-            
-           }
-
-           let selection = selectedTextRange
-           text = String(prospectiveText.prefix(maxLength))
-           selectedTextRange = selection
-       }
+    }
     
-   }
+    func isInputMethod() -> Bool {
+        
+        if let positionRange = self.markedTextRange {
+            
+            if let _ = self.position(from: positionRange.start, offset: 0) {
+                
+                return true
+                
+            }
+            
+        }
+        
+        return false
+        
+    }
+    
+    
+    @objc func checkMaxLength(textField: UITextField) {
+        
+        guard !self.isInputMethod(), let prospectiveText = self.text,
+              prospectiveText.count > maxLength
+        else {
+            
+            return
+            
+        }
+        
+        let selection = selectedTextRange
+        text = String(prospectiveText.prefix(maxLength))
+        selectedTextRange = selection
+    }
+    
+}
 
 extension UITextField{
     
@@ -206,6 +206,7 @@ extension UITextField{
     }
     
 }
+
 extension UIViewController {
     
     func showAlert (alertText: String, alertMessage: String) {
@@ -214,5 +215,17 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: "Got it", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         
+    }
+    
+}
+
+extension UIScrollView {
+    enum ScrollDirection {
+        case up, down, unknown
+    }
+    
+    var scrollDirection: ScrollDirection {
+        guard let superview = superview else { return .unknown }
+        return panGestureRecognizer.translation(in: superview).y > 0 ? .down : .up
     }
 }

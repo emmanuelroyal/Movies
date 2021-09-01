@@ -12,7 +12,7 @@ class SavedDetailViewModel{
     var MovieDetails: [SavedMovieModel] = []
     
     let realm = try! Realm()
-
+    
     
     func delete(item: SavedMovieModel){
         
