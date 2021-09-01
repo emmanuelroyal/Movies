@@ -9,34 +9,10 @@ import Foundation
 import RealmSwift
 
 class SavedDetailViewModel{
-    var movies:[Movie] = []
-    private var service = NetworkService()
-    var data: [SavedMovieModel] {realm.objects(SavedMovieModel.self).map({ $0 })}
-    let realm = try! Realm()
+    var MovieDetails: [SavedMovieModel] = []
     
-    func fetchMovie(movieId: Int, completion: @escaping () -> Void) {
-        
-        self.movies.removeAll()
-        
-        service.fetchMovies(endPoint: "\(movieId)?api_key=d45944547cfa0d9a8c565045b166e51b&language=en-US") { response in
-            
-            guard let response = response.data else { return }
-            
-            do {
-                
-                let movie =  try JSONDecoder().decode(Movie.self, from: response)
-                self.movies.append(movie)
-                completion()
-                
-            } catch {
-                
-                print(error.localizedDescription)
-                
-            }
-            
-        }
-        
-    }
+    let realm = try! Realm()
+
     
     func delete(item: SavedMovieModel){
         let data = realm.objects(SavedMovieModel.self).map({ $0 })

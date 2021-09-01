@@ -1,54 +1,45 @@
 //
-//  ViewController.swift
+//  SavedDataViewController.swift
 //  Movies
 //
-//  Created by Decagon on 8/30/21.
+//  Created by Decagon on 8/31/21.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class SavedDataViewController: UIViewController {
+
     @IBOutlet weak var collection: UICollectionView!
-    var viewModel = MoviesViewModel()
     
-    
-    
+    var viewModel = SavedDataViewModel()
+    var count = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupMediaListeners()
+         count += 1
+    
         
     }
     
-    
-    fileprivate func setupMediaListeners() {
+    override func viewDidAppear(_ animated: Bool) {
+        count += 1
+        if count >= 3 {
+            
+        collection.reloadData()
         
-        viewModel.fetchPopularmovies {
-            
-            self.viewModel.get()
-            
         }
-        
-        viewModel.completion = { [weak self] in
-            
-            DispatchQueue.main.async {
-                self?.collection.reloadData()
-            }
-            
-        }
-        
     }
     
 }
+   
 
-extension ViewController: UICollectionViewDelegate,
+extension SavedDataViewController: UICollectionViewDelegate,
                           UICollectionViewDataSource,
                           UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         
-        viewModel.popularMovies.count
+        viewModel.data.count
         
     }
     
@@ -57,13 +48,13 @@ extension ViewController: UICollectionViewDelegate,
         
         guard let cell = collectionView
                 .dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as?
-                MoviesCollectionViewCell else {
+                SavedDataCollectionViewCell else {
             
             return UICollectionViewCell()
             
         }
         
-        cell.setup(with: viewModel.popularMovies[indexPath.row])
+        cell.setup(with: viewModel.data[indexPath.row])
         return cell
         
     }
@@ -81,13 +72,12 @@ extension ViewController: UICollectionViewDelegate,
         let cell = collectionView.cellForItem(at: indexPath) as? MoviesCollectionViewCell
         cell?.contentView.backgroundColor = .systemGray
         collection.deselectItem(at: indexPath, animated: true)
-        let movieData = viewModel.popularMovies[indexPath.row]
-        let details = EditedMovieModel(name: movieData.name, runTime: "", genre: "", releaseDate: movieData.releaseDate, country: "", tagLine: "", image: "", rating: "", liked: movieData.liked, movieId: movieData.movieId)
+        let movieData = viewModel.data[indexPath.row]
         
-        guard let newViewController = storyboard?.instantiateViewController(identifier: "DetailStoryBoard") as?  DetailViewController   else { return }
+        guard let newViewController = storyboard?.instantiateViewController(identifier: "SavedDetailStoryBoard") as?  SavedDetailsViewController   else { return }
         
-        newViewController.viewModel.movieDetails.removeAll()
-        newViewController.viewModel.movieDetails.append(details)
+        newViewController.viewModel.MovieDetails.append(movieData)
+        print(movieData)
         navigationController?.pushViewController(newViewController, animated: true)
         
     }

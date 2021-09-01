@@ -24,7 +24,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var fourthStar: UIImageView!
     @IBOutlet weak var fifthStar: UIImageView!
     var viewModel = DetailViewModel()
-    
+   var number = 0
     let formatter: DateComponentsFormatter = {
         
         let formatter = DateComponentsFormatter()
@@ -33,20 +33,14 @@ class DetailViewController: UIViewController {
         return formatter
         
     }()
-
+    
+    
     
    
-    fileprivate func configureUIBeforeNetworkCallIsOver() {
-        title = viewModel.movieDetails[0].name
-        movieTitle.text = viewModel.movieDetails[0].name
-        releaseDate.text = viewModel.movieDetails[0].releaseDate
-        movieImage.image = UIImage(systemName: "photo")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUIBeforeNetworkCallIsOver()
-        
         
         
         configureUI()
@@ -54,58 +48,53 @@ class DetailViewController: UIViewController {
     
     
     
-        
+    
     @IBAction func saveTapped(_ sender: Any) {
         guard viewModel.movies.count > 0 else { return }
         let movieToSave = SavedMovieModel()
         movieToSave.country = country.text!
         movieToSave.genre = genre.text!
-        movieToSave.image = movieImage.image
+        movieToSave.image =  NSData(data: movieImage.image!.jpegData(compressionQuality: 1)!)
         movieToSave.liked = true
         movieToSave.name = movieTitle.text!
-        movieToSave.rating = String(viewModel.movies[0].voteAverage)
+        movieToSave.rating = number
         movieToSave.releaseDate = releaseDate.text!
         movieToSave.runTime = runTime.text!
         movieToSave.tagLine = tagLine.text!
         
         viewModel.create(item: movieToSave)
+        
+    }
     
-        }
+    fileprivate func configureUIBeforeNetworkCallIsOver() {
+        title = viewModel.movieDetails[0].name
+        movieTitle.text = viewModel.movieDetails[0].name
+        releaseDate.text = viewModel.movieDetails[0].releaseDate
+        movieImage.sd_setImage(with: viewModel.movieDetails[0].image.asUrl)
+    }
     
     fileprivate func configureUI() {
         viewModel.fetchMovie(movieId: viewModel.movieDetails[0].movieId) {
             DispatchQueue.main.async { [self] in
-                let base = "https://image.tmdb.org/t/p/original/"
                 let data = self.viewModel.movies[0]
-                let image = base + data.backdropPath
-                movieImage.sd_setImage(with: image.asUrl)
-                let remaining: TimeInterval = TimeInterval(data.runtime * 60)
+                let remaining: TimeInterval = TimeInterval(data.runtime! * 60)
                 if let result = formatter.string(from: remaining) {
-                    runTime.text = result
+                    runTime.text = "Run Time: \(result)"
                 }
-                movieTitle.text = data.title
-                var count = 0
-                for genre in data.genres {
-                    count += 1
-                    if count < data.genres.count{
-                        self.genre.text! += "\(genre.name),"
-                    } else {
-                        self.genre.text! += genre.name
-                    }
-                    
-                }
-                releaseDate.text = data.releaseDate
-                country.text = data.productionCountries[0].name
-                tagLine.text = data.tagline
+                movieTitle.text = "Title: \(data.title!)"
+                genre.text! += "\(data.genres!)"
+            
+                releaseDate.text = "Release Date: \(data.release_date!)"
+                country.text = "Country: \(data.production_countries!)"
+                tagLine.text = "Tag Line: \(data.tagline!)"
                 let fullStar = UIImage(systemName: "star.fill")
                 
                 let halfStar = UIImage(systemName: "star.leadinghalf.fill")
                 
-                let number = data.voteAverage
+                number = data.vote_average!
                 
-                let starRatings = Int(number / 10)
                 
-                switch starRatings {
+                switch number {
                 
                 case 1:
                     
@@ -243,8 +232,9 @@ class DetailViewController: UIViewController {
             
             
         }
+        
     }
     
+    
+}
 
-    }
-    

@@ -10,6 +10,7 @@ import SDWebImage
 
 class MoviesCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var likedImage: UIImageView!
     @IBOutlet weak var moviesImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateReleasedLabel: UILabel!
@@ -25,16 +26,15 @@ class MoviesCollectionViewCell: UICollectionViewCell {
         moviesImage.sd_setImage(with: data.image.asUrl)
         nameLabel.text = data.name
         dateReleasedLabel.text = data.releaseDate
+        likedImage.tintColor = data.liked == true ? .systemRed : .systemGray
         
         let fullStar = UIImage(systemName: "star.fill")
         
         let halfStar = UIImage(systemName: "star.leadinghalf.fill")
         
-        let number = Int(data.rating)!
+        let number = Int(data.rating)
         
-        let starRatings = Int(number / 10)
-        
-        switch starRatings {
+        switch number {
         
         case 1:
             

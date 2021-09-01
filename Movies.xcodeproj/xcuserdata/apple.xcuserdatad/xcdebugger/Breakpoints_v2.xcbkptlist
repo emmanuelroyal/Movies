@@ -14,22 +14,6 @@
             filePath = "Movies/MoviesCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "setup(with:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D1764BE7-E7A5-4C11-B30B-4DB8B3F5073B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Movies/MoviesCollectionViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
             landmarkName = "setup(with:)"
@@ -39,7 +23,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F2E38309-C7D7-42FB-A28A-7F948ED21B52"
+            uuid = "D1764BE7-E7A5-4C11-B30B-4DB8B3F5073B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -55,15 +39,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "206368A1-6E6E-410F-8506-FDB67D85F08B"
+            uuid = "F2E38309-C7D7-42FB-A28A-7F948ED21B52"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Movies/MoviesCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "setup(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -71,7 +55,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D11624B8-BAF3-4D28-9843-4B8001301A9E"
+            uuid = "206368A1-6E6E-410F-8506-FDB67D85F08B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -98,53 +82,6 @@
             endingLineNumber = "39"
             landmarkName = "setup(with:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1CB5AEE6-40CF-4691-92B7-7663F6413DD2 - b40d934c40962086"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "1914">
-               </Location>
-               <Location
-                  uuid = "1CB5AEE6-40CF-4691-92B7-7663F6413DD2 - b40d934c40962086"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "1941">
-               </Location>
-               <Location
-                  uuid = "1CB5AEE6-40CF-4691-92B7-7663F6413DD2 - 4b5c4805a61777d3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "95">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -161,53 +98,6 @@
             endingLineNumber = "47"
             landmarkName = "setup(with:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "30A548AC-9A23-4FC2-B983-38BC74A79E1D - b40d934c4096211d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "2405">
-               </Location>
-               <Location
-                  uuid = "30A548AC-9A23-4FC2-B983-38BC74A79E1D - b40d934c4096211d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "2432">
-               </Location>
-               <Location
-                  uuid = "30A548AC-9A23-4FC2-B983-38BC74A79E1D - cc61d2dfb10e2449"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "95">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -224,53 +114,6 @@
             endingLineNumber = "54"
             landmarkName = "setup(with:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "549504C0-C9DE-45B2-AF2E-57D0BD1121AA - b40d934c40962232"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "2896">
-               </Location>
-               <Location
-                  uuid = "549504C0-C9DE-45B2-AF2E-57D0BD1121AA - b40d934c40962232"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "2923">
-               </Location>
-               <Location
-                  uuid = "549504C0-C9DE-45B2-AF2E-57D0BD1121AA - 4d355db1bc04d121"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 () -&gt; () in Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "130">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -287,53 +130,6 @@
             endingLineNumber = "73"
             landmarkName = "setup(with:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7F69C891-FCD5-41DB-9AF2-BF8640645923 - b40d934c40962dde"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "3912">
-               </Location>
-               <Location
-                  uuid = "7F69C891-FCD5-41DB-9AF2-BF8640645923 - b40d934c40962dde"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "3939">
-               </Location>
-               <Location
-                  uuid = "7F69C891-FCD5-41DB-9AF2-BF8640645923 - 4f8eaedd9a72228f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #5 () -&gt; () in Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "130">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -350,53 +146,6 @@
             endingLineNumber = "85"
             landmarkName = "setup(with:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B0446126-0139-45A4-8C78-B878F040C15E - b40d934c40962e35"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "4437">
-               </Location>
-               <Location
-                  uuid = "B0446126-0139-45A4-8C78-B878F040C15E - b40d934c40962e35"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "4464">
-               </Location>
-               <Location
-                  uuid = "B0446126-0139-45A4-8C78-B878F040C15E - f15229b7e568d32d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #6 () -&gt; () in Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "95">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -413,53 +162,22 @@
             endingLineNumber = "98"
             landmarkName = "setup(with:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "71FF288B-AC97-4827-9A7D-CC9ADDB70309 - b40d934c40962888"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "4928">
-               </Location>
-               <Location
-                  uuid = "71FF288B-AC97-4827-9A7D-CC9ADDB70309 - b40d934c40962888"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "4955">
-               </Location>
-               <Location
-                  uuid = "71FF288B-AC97-4827-9A7D-CC9ADDB70309 - 7267b009f06f83d7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #7 () -&gt; () in Movies.MoviesCollectionViewCell.setup(with: Movies.MoviesModel) -&gt; ()"
-                  moduleName = "Movies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/bullz/Movies/Movies/MoviesCollectionViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "102"
-                  endingLineNumber = "102"
-                  offsetFromSymbolStart = "130">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A470BDA0-1B2A-4803-B16A-6199EA23CC94"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Movies/MoviesViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "get()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

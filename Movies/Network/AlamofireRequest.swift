@@ -14,13 +14,9 @@ struct NetworkService {
     fileprivate var baseURL = "https://api.themoviedb.org/3/movie/"
     
     func fetchMovies(endPoint: String,
-                   completion: @escaping (AFDataResponse<Data?>) -> Void) {
+                     completion: @escaping (AFDataResponse<Any>) -> Void) {
         
-        AF.request(self.baseURL + endPoint,
-                   method: .get, parameters: nil,
-                   encoding: URLEncoding.default, headers: nil,
-                   interceptor: nil).response(completionHandler: completion)
-    
+        AF.request(baseURL + endPoint, parameters: nil, headers: nil ).validate(statusCode: 200 ..< 299).responseJSON(completionHandler: completion)
     }
 
 }
