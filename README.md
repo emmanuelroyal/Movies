@@ -9,7 +9,7 @@
 - iPhone
 
 ## Tools 
-- Xcode 9.3 compactible 
+ compactible 
 
 ## Deployment info
 - iOS 14.5
@@ -19,3 +19,6 @@
 
 ## Note
 - clone and run all external libraries used were installed using Swift Package Manager. 
+<img width="394" alt="image2" src="https://user-images.githubusercontent.com/81360481/131735158-774386c5-7312-4b0d-b916-7ca959dff8c4.png">
+<img width="397" alt="Image1" src="https://user-images.githubusercontent.com/81360481/131735172-d1c115ed-2674-430a-a072-40535ae82f79.png">
+
